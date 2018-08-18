@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:RecipeShelf/web.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel run src/index.html watch -p 8080",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf node_modules .cache"
+  },
+  "dependencies": {
+    "@types/react": "^16.4.11",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.9.7"
+  }
+}
