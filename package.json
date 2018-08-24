@@ -22,7 +22,13 @@
     "eslint": "^5.4.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2",
-    "parcel-bundler": "^1.9.7"
+    "husky": "^1.0.0-rc.13",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write *.js && git add"
+    }
   }
 }
