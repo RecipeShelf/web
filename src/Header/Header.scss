@@ -1,0 +1,49 @@
+$rs-orange: #f78153;
+$rs-green: #50d666;
+$rs-blue: #5f9beb;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 10%;
+  max-height: 340px;
+  border-bottom: solid thin black;
+  background-color: rgba(34, 34, 34, .8);
+}
+
+.logo {
+  width:  50px;
+  margin-right: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 2px 0px;
+  padding: 0px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.rs-orange {
+  color: $rs-orange;
+}
+
+.rs-green {
+  color: $rs-green;
+}
+
+.link {
+  padding: 10%;
+  color: #ffffff;
+  text-decoration: none;
+    &:hover {
+      color: #d5d5d5;
+    }
+}
