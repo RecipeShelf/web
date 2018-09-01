@@ -3,5 +3,8 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
+import "./reset.css";
+import "./global.css";
+
 var mountNode = document.getElementById("app");
 ReactDOM.render(<App />, mountNode);
