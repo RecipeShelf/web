@@ -9,7 +9,7 @@ class Page extends React.Component {
         <Header />
         <div>This is a description body!</div>
       </div>
-    )
+    );
   }
 }
 
