@@ -9,9 +9,10 @@ class Page extends React.Component {
     return (
       <div>
         <Header />
-        <Section />
-        <div style={{ height: "1000px", backgroundColor: "#3a1311" }}>
-          This is a description body!
+        <div style={{ height: "1000px", backgroundColor: "#3a1311" }}> {/* Temporary div */}
+          <Section title="Recipes for this week" />
+          <Section title="Popular collections" />
+          <Section title="Famous cuisines" />
         </div>
         <Footer />
       </div>
