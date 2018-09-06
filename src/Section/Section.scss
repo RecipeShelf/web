@@ -1,5 +1,7 @@
+@import '../colours';
+
 .section {
-  padding: 1% 10% 5%;
+  padding: 1% 10%;
 }
 
 .section-title {
@@ -13,30 +15,32 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  margin: 15px 15px 15px 0;
   width: 260px;
 
 }
 
-.preview-text {
-  margin: 2px;
+.preview-content {
+  color: #888;
+  line-height: 27px;
+  margin: 0 10px 5px;
 }
 
-.preview-title-line {
+.preview-title-line,
+.preview-button-line {
   display: flex;
-  justify-content: space between;
+  justify-content: space-between;
+  margin: 10px 0 5px;
 }
 
 .preview-title {
+  align-items: center;
   color: #666;
-  font-size: 14px;
+  display: flex;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 22px;
   margin: 2px 0;
   text-transform: uppercase;
-}
-
-.preview-desc {
-  font-size: 13px;
 }
 
 .chili {
@@ -44,5 +48,36 @@
 }
 
 .preview-hr {
-  width: 258px;
+  border-bottom: 1px solid #eee;
+  border-left: 0;
+  border-top: 0;
+  margin-bottom: 10px;
+  width: 240px;
+}
+
+.preview-text {
+  font-size: 13px;
+}
+
+.preview-time {
+  color: $rs-green;
+}
+
+.preview-note {
+  color: $rs-orange;
+  font-weight: 600;
+}
+
+.preview-button {
+  background-color: $rs-blue;
+  border: solid thin #3181e8;
+  border-radius: 2px;
+  color: #fff;
+  padding: 3% 5%;
+}
+
+.preview-ingredients {
+  align-items: center;
+  display: flex;
+  font-style: italic;
 }
