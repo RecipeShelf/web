@@ -14,4 +14,8 @@ export default class RecipeService extends RecipeShelfService {
     getRecipe(summary: Summary): Promise<Recipe> {
         return this.findItem<Recipe>(summary);
     }
+
+    getRegions(): Promise<string[]> {
+        return this.getDistinct('region');
+    }
 }
