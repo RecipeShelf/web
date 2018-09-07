@@ -1,0 +1,10 @@
+files:
+  include: "src/**/*.s+(a|c)ss"
+  ignore: []
+syntax:
+    include:
+      - scss
+      - sass
+rules:
+  no-color-literals:
+    - 0

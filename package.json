@@ -7,7 +7,9 @@
   "scripts": {
     "start": "parcel run src/index.html watch -p 8080",
     "build": "parcel build src/index.html",
-    "clean": "rm -rf node_modules .cache"
+    "clean": "rm -rf node_modules .cache",
+    "lint": "eslint src && sass-lint -v",
+    "lint:fix": "prettier --write src/**/*.js src/*.js && sass-lint-auto-fix"
   },
   "dependencies": {
     "@types/react": "^16.4.11",
@@ -27,11 +29,13 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.13",
     "parcel-bundler": "^1.9.7",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.11.5"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write *.js && git add"
+      "pre-commit": "npm run lint:fix && git add"
     }
   }
 }
