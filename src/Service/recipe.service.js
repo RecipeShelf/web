@@ -1,6 +1,4 @@
 import RecipeShelfService from "./recipeshelf.service";
-// import { Summary } from "../Model/summary";
-// import Recipe from "../Model/recipe";
 
 class RecipeService extends RecipeShelfService {
   constructor() {

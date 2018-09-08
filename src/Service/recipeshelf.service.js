@@ -1,12 +1,8 @@
 import {
   Stitch,
   RemoteMongoClient,
-  AnonymousCredential,
-  StitchCredential,
-  StitchUser
+  AnonymousCredential
 } from "mongodb-stitch-browser-sdk";
-
-// import { Summary } from "../Model/summary";
 
 const client = Stitch.initializeDefaultAppClient("recipeshelfdev-bwwfr");
 
@@ -15,15 +11,13 @@ const db = client
   .db("recipeshelf");
 
 class RecipeShelfService {
-  _credentials = StitchCredential;
-
   constructor(collectionName) {
     this._collectionName = collectionName;
   }
 
-  get = getFunc => {
+  getDocuments = getFunc => {
     return client.auth
-      .loginWithCredential(this._credentials)
+      .loginWithCredential(this.credentials)
       .then(getFunc)
       .catch(err => {
         console.error(err);
@@ -42,7 +36,7 @@ class RecipeShelfService {
   }
 
   getDistinct = field => {
-    return this.get(user =>
+    return this.getDocuments(user =>
       client
         .callFunction("distinct", [db.name, this._collectionName, field])
         .then(docs => docs)
@@ -50,7 +44,7 @@ class RecipeShelfService {
   };
 
   findSummaries = query => {
-    return this.get(user =>
+    return this.getDocuments(user =>
       db
         .collection(this._collectionName)
         .find(query, { projection: { _id: 1, names: 1 } })
@@ -60,7 +54,7 @@ class RecipeShelfService {
   };
 
   findItem = summary => {
-    return this.get(user =>
+    return this.getDocuments(user =>
       db
         .collection(this._collectionName)
         .find({ _id: summary._id })

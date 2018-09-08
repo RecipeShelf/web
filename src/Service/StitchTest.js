@@ -5,7 +5,13 @@ import RecipeService from "./recipe.service";
 const service = new RecipeService();
 
 const StitchTest = () => {
-  console.log(service.getRecipeSummaries());
+  service.getRegions().then(r => console.log(r))
+  service.getRecipeSummaries().then(r => {    
+    console.log(r)
+    service.getRecipe(r[0]).then(
+      rp => console.log(rp)
+      )
+  })
   return <div>{"asdfasf"}</div>;
 };
 
