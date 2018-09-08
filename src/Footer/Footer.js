@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Footer.scss";
-import netlifyDark from "./images/netiflyDark.svg";
+import netlifyDark from "./images/netlifyDark.svg";
 
 const currentYear = (new Date()).getFullYear();
 
