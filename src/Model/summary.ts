@@ -1,4 +1,4 @@
-export class Summary {
-    _id: string;
-    names: string[];
-}
+// export class Summary {
+//     _id: string;
+//     names: string[];
+// }

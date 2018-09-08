@@ -1,7 +1,7 @@
-import { Decorator } from './constants';
+// import { Decorator } from './constants';
 
-export default class RecipeItem
-{
-    text: string;
-    decorator: Decorator;
-}
+// export default class RecipeItem
+// {
+//     text: string;
+//     decorator: Decorator;
+// }

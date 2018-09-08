@@ -3,6 +3,8 @@ import React from "react";
 import Header from "../Header/index.js";
 import Footer from "../Footer/index.js";
 
+import StitchTest from "../Service/StitchTest";
+
 class Page extends React.Component {
   render() {
     return (
@@ -12,6 +14,7 @@ class Page extends React.Component {
           This is a description body!
         </div>
         <Footer />
+        <StitchTest />
       </div>
     );
   }
