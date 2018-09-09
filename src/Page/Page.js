@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "../Header/index.js";
 import Footer from "../Footer/index.js";
+import Section from "../Section/index.js";
 
 // TODO: Remove as the Home, Collections, Cuisines are built
 const Home = () => <div>This is the home!</div>;
@@ -15,8 +16,10 @@ class Page extends React.Component {
       <Router>
         <div>
           <Header />
-          <div style={{ height: "1000px", backgroundColor: "#3a1311" }}>
-            This is a description body!
+          <div style={{ backgroundColor: "#3a1311" }}> {/* Temporary div */}
+            <Section title="Recipes for this week" />
+            <Section title="Popular collections" />
+            <Section title="Famous cuisines" />
           </div>
           <Footer />
           <Route exact path="/" component={Home} />

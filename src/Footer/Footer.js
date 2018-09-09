@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./Footer.scss";
-import netlifyDark from "./images/netiflyDark.svg";
+import netlifyDark from "./images/netlifyDark.svg";
 
-const currentYear = (new Date()).getFullYear();
+const currentYear = new Date().getFullYear();
 
 const Footer = () => (
   <div className="footer">
