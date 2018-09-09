@@ -16,7 +16,8 @@ class Page extends React.Component {
       <Router>
         <div>
           <Header />
-          <div style={{ backgroundColor: "#3a1311" }}> {/* Temporary div */}
+          <div style={{ backgroundColor: "#3a1311" }}>
+            {/* Temporary div */}
             <Section title="Recipes for this week" />
             <Section title="Popular collections" />
             <Section title="Famous cuisines" />

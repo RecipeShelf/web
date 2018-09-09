@@ -18,11 +18,10 @@ class Header extends React.Component {
           </Link>
         </h1>
         <div>
-
-          <Link to="/collections" className="link header">
+          <Link to="/collections" className="link link-header">
             Collections
           </Link>
-          <Link to="/cuisines" className="link header">
+          <Link to="/cuisines" className="link link-header">
             Cuisines
           </Link>
         </div>
