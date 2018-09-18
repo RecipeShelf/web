@@ -2,45 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Section.scss";
-import mockRecipeImg from "./images/mockRecipeImg.webp";
-import plainChili from "./images/plainChili.svg";
-import redChili from "./images/redChili.svg";
 
-const Section = ({ title }) => (
+const Section = ({ title, children }) => (
   <div className="section">
     <div className="section-title">{title}</div>
     <hr />
-    <div className="preview-box">
-      <img className="thumbnail" src={mockRecipeImg} />
-      <div className="preview-content">
-        <div className="preview-title-line">
-          <span className="preview-title">Recipe Title</span>
-          <span className="preview-heat">
-            <img className="chili" src={plainChili} />
-            <img className="chili" src={plainChili} />
-            <img className="chili" src={redChili} />
-          </span>
-        </div>
-        <div className="preview-text">
-          <div className="preview-desc">
-            Lorem ipsum dolor sit amet, sit ne iudico tempor dicunt, mei fabulas
-            periculis definitionem te, ius novum habemus et.
-          </div>
-          <div className="preview-time">10 minutes</div>
-          <div className="preview-note">Note, if included</div>
-          <hr className="preview-hr" />
-          <div className="preview-button-line">
-            <button className="preview-button">View Recipe</button>
-            <span className="preview-ingredients">12 ingredients</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="section-children">{children}</div>
   </div>
 );
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Section;
