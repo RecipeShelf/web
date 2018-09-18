@@ -1,0 +1,21 @@
+.category-box {
+  background: #fff;
+  border: solid #fff;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 15px 15px 0;
+  width: 260px;
+}
+
+.category-title {
+  align-items: center;
+  color: #666;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 27px;
+  margin: 10px;
+  text-transform: uppercase;
+}
