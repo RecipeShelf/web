@@ -1,3 +1,5 @@
+@import './colours';
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -20,4 +22,8 @@ button {
 .thumbnail {
   align-self: center;
   max-width: 258px;
+}
+
+.background-overlay {
+  background-color: $background;
 }
