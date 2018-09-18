@@ -6,7 +6,7 @@ import netlifyDark from "./images/netlifyDark.svg";
 const currentYear = new Date().getFullYear();
 
 const Footer = () => (
-  <div className="footer">
+  <div className="footer background-overlay">
     <div className="footer-content">
       <div className="footer-top">
         <span className="footer-links">

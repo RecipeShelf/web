@@ -7,7 +7,7 @@ import rsLogo from "./images/rsLogo.png";
 class Header extends React.Component {
   render() {
     return (
-      <div className="header">
+      <nav className="header background-overlay">
         <h1 className="brand">
           <Link to="/">
             <img className="logo" src={rsLogo} alt="Recipe Shelf Logo" />
@@ -17,7 +17,7 @@ class Header extends React.Component {
             <span className="rs-green">Shelf</span>
           </Link>
         </h1>
-        <div>
+        <div className="header-nav">
           <Link to="/collections" className="link link-header">
             Collections
           </Link>
@@ -25,7 +25,7 @@ class Header extends React.Component {
             Cuisines
           </Link>
         </div>
-      </div>
+      </nav>
     );
   }
 }
