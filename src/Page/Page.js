@@ -4,11 +4,17 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "../Header/index.js";
 import Footer from "../Footer/index.js";
 import Section from "../Section/index.js";
+import RecipePreview from "../RecipePreview/index.js";
 
 // TODO: Remove as the Home, Collections, Cuisines are built
 const Home = () => (
   <div>
-    <Section title="Recipes for this week" />
+    <Section title="Recipes for this week">
+      <RecipePreview />
+      <RecipePreview />
+      <RecipePreview />
+      <RecipePreview />
+    </Section>
     <Section title="Popular collections" />
     <Section title="Famous cuisines" />
   </div>
